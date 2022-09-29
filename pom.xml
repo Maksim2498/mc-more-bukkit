@@ -4,7 +4,7 @@
 
     <groupId>space.moontalk.mc.more</groupId>
     <artifactId>bukkit</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 
     <name>More Bukkit</name>
     <description>Small java library providing additions to Bukkit API</description>

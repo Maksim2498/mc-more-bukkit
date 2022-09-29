@@ -36,8 +36,8 @@ public abstract class AbstractConfigMessageProvider implements ConfigMessageProv
         this.substituor  = substituor;
     }
 
-    public @NotNull String getFormattedString(@NotNull String path, @NotNull String ...args) {
-        return substituor.substitute(getString(path), args);
+    public @NotNull String getFormattedString(@NotNull String path, @NotNull String ...substitutions) {
+        return substituor.substitute(getString(path), substitutions);
     }
 
     public @NotNull String getString(@NotNull String path) {
