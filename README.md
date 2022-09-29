@@ -12,7 +12,8 @@
 
 ## About
 
-This is a small java libarary providing additions to Bukkit API.
+This is a small java libarary providing additions to Bukkit API
+and implementations for common plugin functions.
 
 ## Installation
 
