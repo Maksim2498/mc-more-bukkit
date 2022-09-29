@@ -4,7 +4,7 @@
 
     <groupId>space.moontalk.mc.more</groupId>
     <artifactId>bukkit</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>More Bukkit</name>
     <description>Small java library providing additions to Bukkit API</description>
@@ -42,6 +42,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>space.moontalk</groupId>
+            <artifactId>placeholders</artifactId>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
 
