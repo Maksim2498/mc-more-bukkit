@@ -41,6 +41,7 @@ public abstract class AbstractConfigMessageProvider implements ConfigMessageProv
     }
 
     public @NotNull String getString(@NotNull String path) {
-        return config.getString(sectionName + path);
+        path = String.format("%s.%s", sectionName, path);
+        return config.getString(path);
     }
 }
