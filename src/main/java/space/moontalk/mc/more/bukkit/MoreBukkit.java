@@ -5,9 +5,11 @@ import java.util.UUID;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.World;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import lombok.val;
 
@@ -28,6 +30,20 @@ public interface MoreBukkit {
 
     static int getCurrentHour() {
         return Bukkit.getCurrentTick() / HOUR_TICKS;
+    }
+
+
+
+    // Send:
+
+    static void sendMessageIfHas(@NotNull CommandSender sender, @Nullable String message) {
+        if (message == null)
+            return;
+
+        if (message.isBlank())
+            return;
+
+        sender.sendMessage(message);
     }
 
 
