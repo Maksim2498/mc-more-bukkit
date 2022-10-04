@@ -32,7 +32,7 @@ Second, add library as dependency:
 <dependency>
     <groupId>space.moontalk.mc.more</groupId>
     <artifactId>bukkit</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
 </dependency>
 ```
 
