@@ -4,7 +4,7 @@ import org.bukkit.configuration.Configuration;
 
 import org.jetbrains.annotations.NotNull;
 
-public interface ConfigMessageProvider {
+public interface ConfigMessageProvider extends MessageProvider {
     @NotNull Configuration getConfig();
     @NotNull String getSectionName();
     @NotNull String getFormattedString(@NotNull String path, @NotNull String ...substitutions);

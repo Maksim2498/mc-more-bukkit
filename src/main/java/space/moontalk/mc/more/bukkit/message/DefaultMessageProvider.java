@@ -1,5 +1,8 @@
 package space.moontalk.mc.more.bukkit.message;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.bukkit.configuration.Configuration;
 
 import org.jetbrains.annotations.NotNull;
@@ -9,24 +12,22 @@ import lombok.Getter;
 import space.moontalk.placeholders.DefaultSubstituter;
 import space.moontalk.placeholders.Substituter;
 
-public abstract class AbstractConfigMessageProvider implements ConfigMessageProvider {
-    private final @NotNull Substituter substituor;
+@Getter
+public class DefaultMessageProvider implements ConfigMessageProvider {
+    private final @NotNull Substituter               substituor;
+    private final @NotNull Configuration             config;
+    private final @NotNull String                    sectionName;
+    private final @NotNull Map<String, MessageMaker> messageMakers = new HashMap<>();
 
-    @Getter
-    private final @NotNull Configuration config;
-
-    @Getter
-    private final @NotNull String sectionName;
-
-    public AbstractConfigMessageProvider(@NotNull Configuration config) {
+    public DefaultMessageProvider(@NotNull Configuration config) {
         this(config, "");
     }
 
-    public AbstractConfigMessageProvider(@NotNull Configuration config, @NotNull String sectionName) {
+    public DefaultMessageProvider(@NotNull Configuration config, @NotNull String sectionName) {
         this(config, sectionName, new DefaultSubstituter());
     }
 
-    public AbstractConfigMessageProvider(
+    public DefaultMessageProvider(
         @NotNull Configuration config, 
         @NotNull String        sectionName,
         @NotNull Substituter   substituor
